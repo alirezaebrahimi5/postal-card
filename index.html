@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GIF Player</title>
+    <link rel="stylesheet" type="text/css" href="./src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./src/css/player.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+  </head>
+  <body>
+    <div class="gif-container" id="change">
+      <img src="./src/media/gif1.gif" class="overflow-hidden absolute xl:top-[-30vw] sm:top-[-20vw] top-[-20vw] md:top-[-35vw] scale-[80%] sm:scale-[80%] md:scale-[60%] xl:scale-[60%] " alt="Second GIF" id="gif1" style="display:block">
+      <img src="./src/media/gif2.gif" class="overflow-hidden absolute xl:top-[-20px] top-[-10px] sm:top-[20px] md:top-[-80px] scale-[80%] sm:scale-[80%] md:scale-[70%] xl:scale-[80%]" alt="Second GIF" id="gif2" style="display:none">
+      <img id="myImage" src="./src/media/gif3.gif" alt="" style="display:none;">
+      <div class="card lg:relative lg:left-64 -left-4 absolute justify-center mx-auto" id="card">
+        <div class="card-inner" id="cardInner">
+          <div class="card-front">
+            <img src="./src/media/envelope.png" alt="Front Image" class="card-image" id="front" style="display: none;">
+          </div>
+          <div class="card-back">
+            <img src="./src/media/front.png" alt="Back Image" class="card-image" id="back" style="display: none;">
+          </div>
+        </div>
+      </div>
+      <div class="card2 lg:relative lg:right-64 lg:-left-64 -left-8 absolute justify-center mx-auto" id="card2">
+        <div class="card-inner2" id="cardInner2">
+          <div class="card-front2">
+            <img src="./src/media/card2.png" alt="Front Image" class="card-image"2 id="front2" style="display: none;">
+          </div>
+          <div class="card-back2">
+            <img src="./src/media/card1.png" alt="Back Image" class="card-image2" id="back2" style="display: none;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="app-cover" style="display: none;">
+        <div id="bg-artwork"></div>
+        <div id="bg-layer"></div>
+        <div id="player">
+          <div id="player-content">
+            <div id="player-controls">
+              <div class="control">
+                <div class="button" id="play-pause-button">
+                  <i class="fas fa-play"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="./src/js/script.js"></script>
+    <script src="./src/js/player.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </body>
+</html>

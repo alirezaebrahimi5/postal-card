@@ -1,0 +1,146 @@
+html {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+.gif-container {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  overflow: hidden;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh; /* adjust this value according to your GIF size */
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; 
+  margin-top: 20ch;
+  animation: float 20s infinite ease-in-out;
+}
+
+.card2 {
+  width: 150px;
+  height: 100px;
+  perspective: 500px; 
+  margin-top: 40vh;
+  animation: float2 20s infinite ease-in-out;
+}
+
+
+@keyframes float {
+  0% { 
+    transform: translate(0, 0); 
+  }
+  25% { 
+    transform: translate(50px, 0); 
+  }
+  50% { 
+    transform: translate(0, 50px); 
+  }
+  75% { 
+    transform: translate(-50px, 0); 
+  }
+  100% { 
+    transform: translate(0, 0); 
+  }
+}
+@keyframes float2 {
+  0% { 
+    transform: translate(0, 0); 
+  }
+  25% { 
+    transform: translate(-30px, 0); 
+  }
+  50% { 
+    transform: translate(0, -30px); 
+  }
+  75% { 
+    transform: translate(30px, 0); 
+  }
+  100% { 
+    transform: translate(0, 0); 
+  }
+}
+
+
+#myImage {
+  transition: 5s ease-in-out; /* Adjust transition as needed */
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background: white;
+  z-index: 10;
+}
+
+.card {
+  perspective: 1000px;
+}
+
+.card-inner {
+  width: 500px;
+  height: 300px;
+  scale: 30%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-front, .card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.zoom {
+  transform: scale(2);
+  transition: transform 0.5s;
+}
+
+.card2 {
+  perspective: 1000px;
+}
+
+.card-inner2 {
+  width: 500px;
+  height: 300px;
+  scale: 40%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.card-front2, .card-back2{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.card-back2 {
+  transform: rotateY(180deg);
+}
+
+.card-image2 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.zoom2 {
+  transform: scale(2);
+  transition: transform 0.5s;
+}
